@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NATURE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="scene">
+        <div class="moon"> </div>
+            <img src="forest.png" class="forest">
+            <img src="cloud1.png" class="cloud1">
+            <img src="cloud2.png" class="cloud2">
+            <img src="cloud3 (1).png" class="cloud3">
+            <img src="cloud1.png" class="cloud4">
+            <img src="cloud2.png" class="cloud5">
+            <img src="cloud3 (1).png" class="cloud6">
+            <a href="55349__eric5335__oklahoma-summernight-wildlife.wav">Play Sound</a>
+            <embed src="55349__eric5335__oklahoma-summernight-wildlife.wav" hidden="true" autostart="true" loop="5">
+        </div>
+        <script>
+            function stars(){
+                let count = 500;
+                let scene = document.querySelector('.scene');
+                let i = 0;
+                while(i < count){
+                    let star = document.createElement("i");
+                    let x = Math.floor(Math.random() * window.innerWidth);
+                    let y = Math.floor(Math.random() * window.innerHeight);
+                    let duration = Math.random() * 10;
+                    let size = Math.random() * 4;
+
+                    star.style.left = x+'px';
+                    star.style.top = y+'px';
+                    star.style.width = 1+size+'px';
+                    star.style.height = 1+size+'px';
+                    star.style.animationDuration = 7+duration+'s';
+                    star.style.animationDelay = duration+'s';
+
+                    scene.appendChild(star);
+                    i++
+                }
+            }
+            stars();
+        </script>
+</body>
+</html>
